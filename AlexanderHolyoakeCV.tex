@@ -1,0 +1,180 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage[numbers]{natbib}
+\usepackage[dvips]{graphicx}
+%\usepackage[active]{srcltx}
+%\usepackage{pstricks}
+%\usepackage{psfrag}
+%\usepackage{hyperref}
+
+
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-1.0in}
+\setlength{\textheight}{9.9in}
+\setlength{\oddsidemargin}{(\paperwidth - \textwidth)/2-1in}
+\setlength{\evensidemargin}{(\paperwidth - \textwidth)/2-1in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\baselineskip}
+
+
+% DEFINITIONS FOR RESUME
+\newcommand{\lineunder}{\vspace*{0.2cm} \\ \hspace*{-20pt} \hrulefill \\ \vspace{-0.9cm}}
+
+\newcommand{\header}[1]{{\hspace*{-17pt}\vspace*{6pt} \large{\textsc{#1}}}}
+
+\newcommand{\contact}[4]{
+%\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}
+\end{center}
+%\begin{center}
+\hspace{-1cm}
+\begin{tabular}{lll}
+#2 & #3 & #4 \\
+\end{tabular}
+\vspace{0.2cm}
+\lineunder
+%\end{center}
+%\vspace*{-8pt}
+}
+
+
+
+\pagestyle{empty}
+%\linespread{1.1}
+\begin{document}
+
+\small
+\smallskip
+\vspace*{0.0cm}
+
+\contact{Alexander James Holyoake}
+{\begin{tabular}{ll}
+\textbf{Address:} & 10 Rawson Close\\
+ & Oxford OX2 8BS\\
+\end{tabular}}
+{\begin{tabular}{ll}
+\textbf{Email:} & ajholyoake@gmail.com\\
+\textbf{Tel:} & 07979752339 \\
+\end{tabular}}
+{\begin{tabular}{ll}
+\textbf{Date of Birth:} & 07/08/1985 \\
+\textbf{Nationality:} & British \\
+\end{tabular}}
+
+\normalsize
+\header{Technical Experience}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+2012- & \textbf{Performance Analyst at Caterham F1} Vehicle Dynamic and Aerodynamic analysis of car performance. Heavy emphasis on coding new, reusable tools in MATLAB and Python with web-based interfaces\\
+2009-2011 & \textbf{Group Leader for Full Blue Racing} (Cambridge University Formula Student team): designed the intake for the 2010 and 2011 cars, assisted with chassis design, coordinated large portions of the construction, acted as sponsor liason and designed the team's website (www.fullblueracing.co.uk)\\
+2004-2005 & \textbf{E.J. Holyoake Commercial Body Builder}, Shrewsbury: restoring classic vehicles and repairing commercial and industrial vehicles\\
+2000 & \textbf{Computer technician} at Regency Computers, Shrewsbury: Saturday job building and fixing computers\\
+\end{tabular}
+%\vspace{0.4cm}
+\newline
+\lineunder
+
+\header{Education}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+2007-2011 & \textbf{Ph.D. in Granular Dynamics}, Department of Applied Mathematics and Theoretical Physics \& Trinity College, University of Cambridge \\
+2006-2007 & \textbf{Masters Degree in Mathematics}, Trinity College, UoC \\ 
+2005-2007 & \textbf{Certificate and Diploma in Modern Greek} (Degree Level), Trinity College, UoC \\
+2003-2006 & \textbf{First Class B.A. (Hons) in Mathematics} Trinity College, UoC \\
+June 2003 & \textbf{Sixth Term Examination Papers} 2 and 3 (Grade S - outstanding)  \\
+2001-2003 & \textbf{6 A levels and 1 AS level} all grade A \\
+1996-2001 & \textbf{14 GCSEs}, 11 A* including English and German \\
+\end{tabular}
+\newline
+%\vspace{0.2cm}
+\lineunder
+
+\header{Major Awards and Prizes}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+2007-2010 & \textbf{Research council (NERC) studentship} for duration of Ph.D. to cover university fees, lab costs, field work, conference costs and \pounds 13,000 maintenance grant per year. Extra 6 months awarded for promising research\\ 
+2006,2007 & \textbf{Language Bursary} worth \pounds 1600 p.a. to study Modern Greek in Greece\\ 
+2006 & \textbf{Trinity College Senior Scholarship} For first class degree\\
+June 2006 & \textbf{Heilbronn Prize} for outstanding final year result\\
+2004 & \textbf{Trinity College Junior Scholarship} For first class degree in first year\\
+
+\end{tabular}
+\newline
+%\vspace{0.2cm}
+\lineunder
+
+\header{Research Record}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+2007-2011 & \textbf{Ph.D.:} \textit{``Rapid Granular Flows in an Inclined Chute''}  \\
+ & Investigating accelerating chute flows; conducted experiments collecting data with bespoke software (C, MATLAB); filtered, processed and analysed data, and compared with solutions produced from a custom non-linear PDE solver \\
+2011-2012 & \textbf{First-authored paper} with title ``High-speed granular flows'' in the Journal of Fluid Mechanics (Journal of Fluid Mechanics) \\
+March 2009 & \textbf{Conducted 3-week fieldwork} at Swiss Avalanche Institute studying snow avalanches \\
+2008,2009 & \textbf{Presented work at leading international conference} in field (Gordon Granular Conference, Maine, US) \\
+2007-2009 & \textbf{Gave several presentations} in Cambridge in various talk series \\
+
+\end{tabular}
+\newline
+%\vspace{0.2cm}
+\lineunder
+
+
+
+\header{Positions of responsibility}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+2012- & \textbf{Performance Analysis} Technical / Implementation lead of a small group of analysts developing reusable tools with innovative user interfaces. Mathworks liaison providing basic training to other employees\\ 
+2012- & \textbf{Staff Coffee} Implemented company wide site to order coffee centrally for a discount. Managed deliveries etc.\\
+2012      & \textbf{Property Development} sole project manager and instigator of a small residential development project on a brown field site\\
+2011      & \textbf{Mathematicians' Coffee} raised money, organised academic book collection and encouraged attendance to promote communication within the department\\
+2009-2010 & \textbf{Organised a series of weekly talks} for the G.K. Batchelor fluids lab, Department of Applied Mathematics and Theoretical Physics, University of Cambridge \\
+%2008-date & \textbf{Helped with Maths Open Days}; advertised, organised and demonstrated lab experiments to prospective students \\ 
+%2008-2011 & \textbf{Helped organise weekly social events} in the Maths Department; responsible for managing stock and recruiting volunteers\\
+%2005-2007 & \textbf{Organised socials} and fixtures for College Darts team \\
+\end{tabular}
+\newline
+\lineunder
+
+\header{Teaching  \& Communication}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+2007-2011 & \textbf{Supervisor in Mathematics}: taught small groups of Cambridge undergraduate students; more than 170 hours of teaching of several degree level courses, ranging from introductory first year subjects to advanced final year topics \\ 
+2007-2011 & \textbf{Coursework Demonstrator} programme: assisted Cambridge Mathematics undergraduate students with programming in Matlab and C\\
+2008      & \textbf{Mentored inner city Sixth Form Students} during Cambridge Summer School programme \\
+2005      & \textbf{Teaching assistant} for GCSE Resit Class at Hills' Road Sixth Form College \\ 
+\end{tabular}
+\newline
+%\vspace{0.2cm}
+\lineunder
+
+\header{Computing}
+
+\begin{tabular}{p{2.8in}p{3.3in}}
+\textbf{Matlab + MEX (C Extensions)} & Expert; data processing, calibration routines and non-linear PDE solver (finite volume and spectral)\\
+\textbf{HTML, CSS, PHP, Javascript (Client and server side)} & Proficient\\
+\textbf{C / C++ (Linux and Windows frameworks)}     & Proficient; data acquisition and time critical Matlab routines\\
+\textbf{Mathematical .NET} & Intermediate; implementations of mathematical algorithms for use in other components\\
+\textbf{Python} & Proficient\\
+\textbf{Office Suite \& VBA} & Proficient\\
+\textbf{BASH}   & Proficient\\
+\textbf{\LaTeX} & Proficient\\
+\textbf{Solidworks CAD} & Proficient; air intake design for Formula Student \\
+\textbf{Digiflow (experiment analysis)} & Proficient; Particle Image Velocimetry routines and data acquisition\\
+\textbf{Operating systems} & Excellent knowledge of using and administrating Linux systems (Gentoo and Ubuntu) and  Windows; also proficient with OSX and cursory knowledge of XCode \\
+\end{tabular}
+\newline
+\lineunder
+
+\header{Other Skills and Interests}
+
+\begin{tabular}{p{0.8in}p{5.3in}}
+\textbf{Languages} & Greek (degree level), German (intermediate), French (intermediate)\\
+\textbf{Driving} & Full clean driving licence \\
+\textbf{Sport} & Running, cycling, skiing, darts and watching Formula 1, learning to sail, go-karting, kit car track days\\
+\textbf{Music} & Playing the piano, guitar and French horn\\ 
+\textbf{Other} & Restoring bikes and cars, barbeque construction, home brewing\\
+\end{tabular}
+\end{document}
