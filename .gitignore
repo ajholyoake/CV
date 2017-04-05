@@ -184,3 +184,5 @@ TSWLatexianTemp*
 *.d
 *.ps
 .DS_Store
+
+auto 

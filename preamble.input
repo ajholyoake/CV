@@ -1,0 +1,79 @@
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage[numbers]{natbib}
+\usepackage[dvips]{graphicx}
+\usepackage{listings} 
+%\usepackage[active]{srcltx}
+%\usepackage{pstricks}
+%\usepackage{psfrag}
+%\usepackage{hyperref}
+
+
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-1.2in}
+\setlength{\textheight}{10.1in}
+\setlength{\oddsidemargin}{(\paperwidth - \textwidth)/2-1in}
+\setlength{\evensidemargin}{(\paperwidth - \textwidth)/2-1in}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{\baselineskip}
+
+
+% DEFINITIONS FOR RESUME
+\newcommand{\lineunder}{\vspace*{0.2cm} \\ \hspace*{-20pt} \hrulefill \\ \vspace{-0.9cm}}
+
+\newcommand{\header}[1]{{\hspace*{-17pt}\vspace*{6pt} \large{\textsc{#1}}}}
+
+\newcommand{\contact}[4]{
+%\vspace*{-8pt}
+\begin{center}
+{\LARGE \scshape {#1}}
+\end{center}
+%\begin{center}
+\hspace{-1cm}
+\begin{tabular}{lll}
+#2 & #3 & #4 \\
+\end{tabular}
+\vspace{0.2cm}
+\lineunder
+%\end{center}
+%\vspace*{-8pt}
+}
+
+\newenvironment{2colsection}[1][]%
+{%
+  \header{#1}
+
+  \begin{tabular}{p{2.8in}p{3.3in}}
+}
+{
+  \end{tabular}
+  %\vspace{0.4cm}
+  \newline
+  \lineunder
+}
+
+\newenvironment{cvsection}[1][]%
+{%
+  \header{#1}
+
+  \begin{tabular}{p{0.8in}p{5.3in}}
+}
+{
+  \end{tabular}
+  %\vspace{0.4cm}
+  \newline
+  \lineunder
+}
+\newcommand{\specialcell}[2][l]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
+
+\pagestyle{empty}
+
+
+\def\R #1|#2|#3|#4|{ #1 -- #2 & \textbf{#3} #4 \\}
+\def\Rs #1|#2|#3| {#1 & \textbf{#2} #3 \\}
+
+\def\Rc #1|#2| {\textbf{#1} & #2 \\}
+\def\Rcc #1|#2|#3| {\specialcell{\textbf{#1}\\#2} & #3 \\}
