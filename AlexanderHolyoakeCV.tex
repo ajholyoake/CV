@@ -4,6 +4,7 @@
 \usepackage{calc}
 \usepackage[numbers]{natbib}
 \usepackage[dvips]{graphicx}
+\usepackage{listings} 
 %\usepackage[active]{srcltx}
 %\usepackage{pstricks}
 %\usepackage{psfrag}
@@ -40,11 +41,44 @@
 %\vspace*{-8pt}
 }
 
+\newenvironment{2colsection}[1][]%
+{%
+  \header{#1}
 
+  \begin{tabular}{p{2.8in}p{3.3in}}
+}
+{
+  \end{tabular}
+  %\vspace{0.4cm}
+  \newline
+  \lineunder
+}
+
+\newenvironment{cvsection}[1][]%
+{%
+  \header{#1}
+
+  \begin{tabular}{p{0.8in}p{5.3in}}
+}
+{
+  \end{tabular}
+  %\vspace{0.4cm}
+  \newline
+  \lineunder
+}
+\newcommand{\specialcell}[2][l]{%
+  \begin{tabular}[#1]{@{}l@{}}#2\end{tabular}}
 
 \pagestyle{empty}
 %\linespread{1.1}
 \begin{document}
+
+
+\def\R #1|#2|#3|#4|{ #1 -- #2 & \textbf{#3} #4 \\}
+\def\Rs #1|#2|#3| {#1 & \textbf{#2} #3 \\}
+
+\def\Rc #1|#2| {\textbf{#1} & #2 \\}
+\def\Rcc #1|#2|#3| {\specialcell{\textbf{#1}\\#2} & #3 \\}
 
 \small
 \smallskip
@@ -57,7 +91,8 @@
 \end{tabular}}
 {\begin{tabular}{ll}
 \textbf{Email:} & ajholyoake@gmail.com\\
-\textbf{Tel:} & +44 (0) 7979752339 \\
+   \textbf{Tel:} & +44 (0) 7979752339 \\
+   \textbf{GitHub:} & ajholyoake \\
 \end{tabular}}
 {\begin{tabular}{ll}
 \textbf{Date of Birth:} & 07/08/1985 \\
@@ -65,121 +100,171 @@
 \end{tabular}}
 
 \normalsize
-\header{Technical Experience}
+\begin{cvsection}[Relevant Experience]
+   \R 2014|2016|Race Strategist at Mercedes F1 Team|Data Science; Developer; Replace spreadsheets with
+   rigorous inference and automated python system; .NET library development for
+   data structuring; web UI development for easy deployment; rapid, high
+   pressure decision making; .NET Monte Carlo Simulation|
+   \R 2012|2014|Performance Analyst at Caterham F1|Data Science; Lead developer
+   in small group for Python and MATLAB tools with web interfaces for post session analysis|
+   \R 2007|2011|Experimental Ph.D. in Applied Mathematics|Data analysis;
+   Windows, Bash, MATLAB, C++, C experience to automate data collection; PIV;
+   Reverse enginnering serial protocol for instrumention; Hardware development
+   for data acquisition|
+   \R 2009|2011|Formula Student|Working with a large team in very high pressure
+   environment; Website development; Manage and encourage team; Sponsor liaison; Constructed large
+   proportion of the car; Custom Software simulation with Bash / python
+   interface to optimisation routines|
+   \R 2005|2010|Gentoo|Used as main system including all packages compiled from
+   source, kernel maintenance etc (for fun)|
+\end{cvsection}
 
-\begin{tabular}{p{0.8in}p{5.3in}}
-2014-2016 & \textbf{Race Strategist at Mercedes AMG F1} Development of strategy software (simulation, analysis and real time tools), pre-race forecasting, in-race strategy, post-race analysis. Heavy emphasis on automating and adding rigour and consistency to the group's practices\\
-2012-2014 & \textbf{Performance Analyst at Caterham F1} Vehicle dynamic and aerodynamic analysis of car performance. Heavy emphasis on coding new, reusable tools in MATLAB and Python with web-based interfaces\\
-2009-2011 & \textbf{Group Leader for Full Blue Racing} (Cambridge University Formula Student team): designed the intake for the 2010 and 2011 cars, assisted with chassis design, coordinated large portions of the construction, acted as sponsor liason and designed the team's website (www.fullblueracing.co.uk)\\
-%2004-2005 & \textbf{E.J. Holyoake Commercial Body Builder}, Shrewsbury: restoring classic vehicles and repairing commercial and industrial vehicles\\
-%2000 & \textbf{Computer technician} at Regency Computers, Shrewsbury: Saturday job building and fixing computers\\
+
+% \header{Technical Experience}
+
+% \begin{tabular}{p{0.8in}p{5.3in}}
+% 2014-2016 & \textbf{Race Strategist at Mercedes AMG F1} Development of strategy software (simulation, analysis and real time tools), pre-race forecasting, in-race strategy, post-race analysis. Heavy emphasis on automating and adding rigour and consistency to the group's practices\\
+% 2012-2014 & \textbf{Performance Analyst at Caterham F1} Vehicle dynamic and aerodynamic analysis of car performance. Heavy emphasis on coding new, reusable tools in MATLAB and Python with web-based interfaces\\
+% 2009-2011 & \textbf{Group Leader for Full Blue Racing} (Cambridge University Formula Student team): designed the intake for the 2010 and 2011 cars, assisted with chassis design, coordinated large portions of the construction, acted as sponsor liason and designed the team's website (www.fullblueracing.co.uk)\\
+% %2004-2005 & \textbf{E.J. Holyoake Commercial Body Builder}, Shrewsbury: restoring classic vehicles and repairing commercial and industrial vehicles\\
+% %2000 & \textbf{Computer technician} at Regency Computers, Shrewsbury: Saturday job building and fixing computers\\
   
-\end{tabular}
-%\vspace{0.4cm}
-\newline
-\lineunder
+% \end{tabular}
+% %\vspace{0.4cm}
+% \newline
+% \lineunder
 
-\header{Education}
+\begin{cvsection}[Education]
+\R 2013|2015|Various Machine Learning Courses|Coursera, Cambridge Coding Academy Workshop, Cranfield Operational Research|
+\R 2007|2011|Ph.D. in Granular Dynamics|Department of Applied Mathematics and Theoretical Physics \& Trinity College, University of Cambridge|
+\R 2006|2007|Masters Degree in Mathematics|Trinity College, Cambridge|
+\R 2005|2007|Certificate and Diploma in Modern Greek|Trinity College, Cambridge;
+Scholarship|
+\R 2003|2006|First Class B.A. (Hons) in Mathematics|Trinity College, Cambridge;
+Scholarship for exceptional performance; Heilbronn Prize|
+\R 2002|2003|Sixth Term Examination Papers| 2 and 3 (Grade S - outstanding)|
+\R 2001|2003|6 A levels and 1 AS level| all grade A|
+\R 1996|2001|14 GCSEs|11 A* including English and German|
+\end{cvsection}
 
-\begin{tabular}{p{0.8in}p{5.3in}}
-2013-2015 & \textbf{Various Machine Learning Courses} Coursera, Cambridge Coding Academy Workshop, Cranfield Operational Research\\
-2007-2011 & \textbf{Ph.D. in Granular Dynamics}, Department of Applied Mathematics and Theoretical Physics \& Trinity College, University of Cambridge \\
-2006-2007 & \textbf{Masters Degree in Mathematics}, Trinity College, Cambridge \\ 
-2005-2007 & \textbf{Certificate and Diploma in Modern Greek}, Trinity College, Cambridge \\
-2003-2006 & \textbf{First Class B.A. (Hons) in Mathematics} Trinity College, Cambridge\\
-June 2003 & \textbf{Sixth Term Examination Papers} 2 and 3 (Grade S - outstanding)  \\
-2001-2003 & \textbf{6 A levels and 1 AS level} all grade A \\
-1996-2001 & \textbf{14 GCSEs}, 11 A* including English and German \\
-\end{tabular}
-\newline
+%\header{Major Awards and Prizes}
+
+%\begin{tabular}{p{0.8in}p{5.3in}}
+%2007-2010 & \textbf{Research council (NERC) studentship} for duration of Ph.D. to cover university fees, lab costs, field work, conference costs and \pounds 13,000 maintenance grant per year. Extra 6 months awarded for promising research\\ 
+%2006,2007 & \textbf{Language Bursary} worth \pounds 1600 p.a. to study Modern Greek in Greece\\ 
+%2006 & \textbf{Trinity College Senior Scholarship} For first class degree\\
+%June 2006 & \textbf{Heilbronn Prize} for outstanding final year result\\
+%2004 & \textbf{Trinity College Junior Scholarship} For first class degree in first year\\
+%\end{tabular}
+%\newline
 %\vspace{0.2cm}
-\lineunder
+%\lineunder
 
-\header{Major Awards and Prizes}
+%\header{Research Record}
 
-\begin{tabular}{p{0.8in}p{5.3in}}
-2007-2010 & \textbf{Research council (NERC) studentship} for duration of Ph.D. to cover university fees, lab costs, field work, conference costs and \pounds 13,000 maintenance grant per year. Extra 6 months awarded for promising research\\ 
-2006,2007 & \textbf{Language Bursary} worth \pounds 1600 p.a. to study Modern Greek in Greece\\ 
-2006 & \textbf{Trinity College Senior Scholarship} For first class degree\\
-June 2006 & \textbf{Heilbronn Prize} for outstanding final year result\\
-2004 & \textbf{Trinity College Junior Scholarship} For first class degree in first year\\
-\end{tabular}
-\newline
-%\vspace{0.2cm}
-\lineunder
-
-\header{Research Record}
-
-\begin{tabular}{p{0.8in}p{5.3in}}
-2014-2016 & \textbf{Co-supervision of master's projects} 6 projects supervised in conjunction with leading universities to further data processing capabilities at Mercedes AMG F1 \\
-2007-2011 & \textbf{Ph.D.:} \textit{``Rapid Granular Flows in an Inclined Chute''}  \\
- & Investigating accelerating chute flows; conducted experiments collecting data with bespoke software (C, MATLAB); filtered, processed and analysed data, and compared with solutions produced from a custom non-linear PDE solver \\
-2011-2012 & \textbf{First-authored paper}  ``High-speed granular flows'' in the Journal of Fluid Mechanics\\
-March 2009 & \textbf{Conducted 3-week fieldwork} at SLF (Swiss Avalanche Institute) studying snow avalanches \\
+%\begin{tabular}{p{0.8in}p{5.3in}}
+%2014-2016 & \textbf{Co-supervision of master's projects} 6 projects supervised in conjunction with leading universities to further data processing capabilities at Mercedes AMG F1 \\
+%2007-2011 & \textbf{Ph.D.:} \textit{``Rapid Granular Flows in an Inclined Chute''}  \\
+% & Investigating accelerating chute flows; conducted experiments collecting data with bespoke software (C, MATLAB); filtered, processed and analysed data, and compared with solutions produced from a custom non-linear PDE solver \\
+%2011-2012 & \textbf{First-authored paper}  ``High-speed granular flows'' in the Journal of Fluid Mechanics\\
+%March 2009 & \textbf{Conducted 3-week fieldwork} at SLF (Swiss Avalanche Institute) studying snow avalanches \\
 %2008,2009 & \textbf{Presented work at leading international conference} in field (Gordon Granular Conference, Maine, US) \\
 %2007-2009 & \textbf{Gave several presentations} in Cambridge in various talk series \\
 
-\end{tabular}
+%\end{tabular}
 %\newpage
-\newline
-\vspace{0.2cm}
-\lineunder
-%\vspace{1cm)
+%\newline
+%\vspace{0.2cm}
+%\lineunder
+%\vspace{1cm) 
 
-\header{Positions of responsibility}
+%\header{Positions of responsibility}
 
-\begin{tabular}{p{0.8in}p{5.3in}}
-2014-2016 & \textbf{Race Strategy} Responsible for individual cars' strategy over the weekend. Developmental lead in strategy group. \\  
-2012-2014 & \textbf{Performance Analysis} Technical / Implementation lead of a small group of analysts developing reusable tools with innovative user interfaces. Mathworks liaison providing basic training to other employees\\ 
-2012-2014 & \textbf{Staff Coffee} Implemented company wide site to order coffee centrally for a discount. Managed deliveries etc.\\
-2012      & \textbf{Property Development} sole project manager and instigator of a small residential development project on a brown field site\\
-2011      & \textbf{Mathematicians' Coffee} raised money, organised academic book collection and encouraged attendance to promote communication within the department\\
+%\begin{tabular}{p{0.8in}p{5.3in}}
+%2014-2016 & \textbf{Race Strategy} Responsible for individual cars' strategy over the weekend. Developmental lead in strategy group. \\  
+%2012-2014 & \textbf{Performance Analysis} Technical / Implementation lead of a small group of analysts developing reusable tools with innovative user interfaces. Mathworks liaison providing basic training to other employees\\ 
+%2012-2014 & \textbf{Staff Coffee} Implemented company wide site to order coffee centrally for a discount. Managed deliveries etc.\\
+%2012      & \textbf{Property Development} sole project manager and instigator of a small residential development project on a brown field site\\
+%2011      & \textbf{Mathematicians' Coffee} raised money, organised academic book collection and encouraged attendance to promote communication within the department\\
 %2009-2010 & \textbf{Organised a series of weekly talks} for the G.K. Batchelor fluids lab, Department of Applied Mathematics and Theoretical Physics, University of Cambridge \\
 %2008-date & \textbf{Helped with Maths Open Days}; advertised, organised and demonstrated lab experiments to prospective students \\ 
 %2008-2011 & \textbf{Helped organise weekly social events} in the Maths Department; responsible for managing stock and recruiting volunteers\\
 %2005-2007 & \textbf{Organised socials} and fixtures for College Darts team \\
-\end{tabular}
-\newline
-\lineunder
+%\end{tabular}
+%\newline
+%\lineunder
+\begin{cvsection}[Communication]
+  \R 2014|2016|Race Strategy Briefings| Lead briefing to team owners, drivers
+  and Mercedes board thoughout race weekend|
+  \R 2010|2016|Software Liaison| Finding solutions between strategy developers,
+  IT \& infrastructure, software group and third party software providers|
+  \Rs 2011|Workplace Coffee| Intranet site to centralize coffee ordering and
+  encourage isolated departments to interact|
+  \R 2010|2011|Mathematicians' Coffee|Raised money to organise space for informal discussions in
+  Maths department as inter group communication was very poor|
+  \R 2008|2011|Supervisor for Undergraduate Mathematics|Three special
+  commendations for quality of teaching from leader of programme based on
+  student feedback|
+  \Rs 2008|Inner City Sixth Form Maths Mentoring| Helped GCSE resit students|
+\end{cvsection}
 
-\header{Teaching  \& Communication}
+% \header{Teaching  \& Communication}
 
-\begin{tabular}{p{0.8in}p{5.3in}}
-2014-2016 & \textbf{Race Strategy} Lead briefing to team owners, drivers and Mercedes board through race weekend\\
-2007-2011 & \textbf{Supervisor in Mathematics}: taught small groups of Cambridge undergraduate students; more than 170 hours of teaching of several degree level courses, ranging from introductory first year subjects to advanced final year topics. 3 special commendations for quality of teaching  \\ 
-2007-2011 & \textbf{Coursework Demonstrator} programme: assisted Cambridge Mathematics undergraduate students with programming in Matlab and C\\
-2008      & \textbf{Mentored inner city Sixth Form Students} during Cambridge Summer School programme \\
-%2005      & \textbf{Teaching assistant} for GCSE Resit Class at Hills' Road Sixth Form College \\ 
-\end{tabular}
-\newline
-%\vspace{0.2cm}
-\lineunder
+% \begin{tabular}{p{0.8in}p{5.3in}}
+% 2014-2016 & \textbf{Race Strategy} Lead briefing to team owners, drivers and Mercedes board through race weekend\\
+% 2007-2011 & \textbf{Supervisor in Mathematics}: tau ght small groups of Cambridge undergraduate students; more than 170 hours of teaching of several degree level courses, ranging from introductory first year subjects to advanced final year topics. 3 special commendations for quality of teaching  \\ 
+% 2007-2011 & \textbf{Coursework Demonstrator} programme: assisted Cambridge Mathematics undergraduate students with programming in Matlab and C\\
+% 2008      & \textbf{Mentored inner city Sixth Form Students} during Cambridge Summer School programme \\
+% %2005      & \textbf{Teaching assistant} for GCSE Resit Class at Hills' Road Sixth Form College \\ 
+% \end{tabular}
+% \newline
+% %\vspace{0.2cm}
+% \lineunder
 
-\header{Computing}
+\header{Technology}
 
 \begin{tabular}{p{2.8in}p{3.3in}}
 \textbf{Python} & Expert, systems programming, machine learning, extensive data analysis \\
-\textbf{Matlab + MEX (C Extensions)} & Expert; data processing, calibration routines and non-linear PDE solver (finite volume and spectral)\\
-\textbf{HTML, CSS, Javascript} & Proficient\\
+\textbf{Matlab + MEX (C Extensions)} & Expert; data processing, image processing, calibration routines and non-linear PDE solver (finite volume and spectral)\\
+\textbf{HTML, CSS, Javascript} & Proficient; Experience with express, templating engines, REST interfaces\\
 \textbf{C / C++ (Linux and Windows)}     & Proficient; data acquisition and time critical Matlab routines\\
-\textbf{.NET} & Expert; Core track data processing library, implementations of mathematical algorithms for use in other components\\
+\textbf{SQL} & Proficicent; MS-SQL, Postgres, MySQL, SQLLite \\
+\textbf{.NET} & Expert; Core track data processing library, implementations of mathematical algorithms for use in other components \\
+\textbf{Java} & Beginner; Basic Android development. Computational Fluid Dynamics Post-Processing routines\\
+\textbf{Go} & Beginner; Hobby projects to play with concurrency features\\
 \textbf{Office Suite \& VBA} & Proficient\\
 \textbf{BASH}   & Proficient\\
 \textbf{\LaTeX} & Proficient\\
-\textbf{Solidworks CAD} & Proficient; air intake design for Formula Student \\
+%\textbf{Solidworks CAD} & Proficient; air intake design for Formula Student \\
 %\textbf{Digiflow (experiment analysis)} & Proficient; Particle Image Velocimetry routines and data acquisition\\
 \textbf{Operating systems} & Excellent knowledge of using and administrating Linux systems (Gentoo and Ubuntu) and  Windows; also proficient with OSX and cursory knowledge of XCode \\
 \end{tabular}
 \newline
 \lineunder
 
+\begin{2colsection}[Projects]
+\Rcc Embedded GPS Logger|github.com/ajholyoake/adaloggergps|Embedded C project
+to log GPS data on an Pi Zero to an SD card to study velocity, acceleration and
+altitude data for a dirt bike expedition|
+\Rcc Intranet Coffee Store|github.com/ajholyoake/coffee|Node.js, express, html, IIS
+bootstrap project to centralize coffee ordering and to compile metrics|
+\Rcc Online GPS Tracker|github.com/ajholyoake/spot\_tracker|Python (Flask),
+Javascript, HTML page to update family and friends of location via a satellite tracker|
+\Rcc Graph Theory Animation|github.com/ajholyoake/percolator|Javascript, HTML
+single page for illustrating the concept of percolation in graph theory|
+\Rc Home Automation|Developing software to Raspberry Pi and The Next Chip for
+lighting and audio and automating home brewing|
+\end{2colsection}
+
+
 \header{Other Skills and Interests}
 
-\begin{tabular}{p{0.8in}p{5.3in}}
+\begin{tabular}{p{1.8in}p{4.3in}}
+\textbf{Physical Hacking} & Complete renovation and construction of a house; extreme bike maintenance; welding; car maintenance; barbequeue design and manufacture; growing vegetables\\
 \textbf{Languages} & Greek (degree level), German (intermediate), Spanish (intermediate)\\
 \textbf{Driving} & Full driving licence (inc. motorcycles) \\
+
 %\textbf{Sport} & Running, cycling, skiing, darts and watching Formula 1, learning to sail, go-karting, kit car track days\\
 %\textbf{Music} & Playing the piano, guitar and French horn\\ 
-\textbf{Other} & Restoring bikes and houses, barbeque construction, home brewing\\
 \end{tabular}
 \end{document}
